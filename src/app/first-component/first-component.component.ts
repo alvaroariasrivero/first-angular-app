@@ -9,6 +9,7 @@ export class FirstComponentComponent {
 
   counter: number = 0;
   message: string = "";
+  showCounter: boolean = true;
 
   increaseCounter() {
     if(this.counter <10){
@@ -27,8 +28,10 @@ export class FirstComponentComponent {
   checkCounter() {
     if(this.counter === 10){
       this.message = "Ya no puedes sumar más";
+      this.showCounter = false;
     }else{
       this.message = "";
+      this.showCounter = true;
     }
   };
 
