@@ -1,1 +1,9 @@
-<p>Soy el segundo componente</p>
+<h1>Second-component</h1>
+<p>El mesaje recibido desde el padre es: {{receivingFromParent}}</p>
+
+<div>
+    <label for="messageToFather">Este es el mensaje para el padre:</label>
+    <!-- Para los formularios importante importar en app.module FormsModule  -->
+    <input type="text" name="messageToFather" [(ngModel)]="outputMessage">
+    <button (click)="sendMessage()">Enviar al padre</button>
+</div>

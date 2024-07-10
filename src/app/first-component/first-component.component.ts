@@ -12,7 +12,7 @@ export class FirstComponentComponent {
   showCounter: boolean = true;
 
   increaseCounter() {
-    if(this.counter <10){
+    if(this.counter <11){
       this.counter++;
       this.checkCounter();
     }
@@ -26,13 +26,24 @@ export class FirstComponentComponent {
   };
 
   checkCounter() {
-    if(this.counter === 10){
+    if(this.counter === 11){
       this.message = "Ya no puedes sumar más";
       this.showCounter = false;
     }else{
       this.message = "";
       this.showCounter = true;
     }
+  };
+
+  // Datos para enviar al hijo
+  messageToSon: string = "Mensaje desde el padre";
+
+  // Datos recibidos desde el hijo
+
+  messageFromSon: string = "";
+
+  receiveMessage($event: string){
+    this.messageFromSon = $event;
   };
 
 }
