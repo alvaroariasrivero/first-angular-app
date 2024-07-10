@@ -5,4 +5,7 @@
 <button (click)="decreaseCounter()">Resta</button>
 <h5>El mensaje recibido desde second-component(hijo) es: {{messageFromSon}}</h5>
 
+<h3>{{olderBrotherName}}</h3>
+<button (click)="salute()">Saludar</button>
+
 <app-second-component [receivingFromParent]="messageToSon" (messageFromSon)="receiveMessage($event)"/>

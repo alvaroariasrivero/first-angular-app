@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { LearningServiceService } from '../learning-service.service';
 
 @Component({
   selector: 'app-first-component',
   templateUrl: './first-component.component.html',
   styleUrl: './first-component.component.css'
 })
-export class FirstComponentComponent {
+export class FirstComponentComponent implements OnInit {
 
   counter: number = 0;
   message: string = "";
@@ -44,6 +45,26 @@ export class FirstComponentComponent {
 
   receiveMessage($event: string){
     this.messageFromSon = $event;
+  };
+
+  // Inyección de servicios
+
+  olderBrotherName: string = '';
+
+  // constructor(
+  //   private _learningService: LearningServiceService
+  // ) {};
+
+  // En lugar del constructor, también se puede inyectar de esta forma, pero hay que importar inject
+  private _learningService = inject(LearningServiceService);
+
+  ngOnInit(): void {
+    this._learningService.setOlderBrother('Juan');
+    this.olderBrotherName = this._learningService.getOlderBrother();
+  };
+
+  salute(){
+    this._learningService.salute(this._learningService.getYoungerBrother() || '');
   };
 
 }
