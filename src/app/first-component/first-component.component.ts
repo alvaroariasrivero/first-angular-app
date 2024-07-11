@@ -11,6 +11,8 @@ export class FirstComponentComponent implements OnInit {
   counter: number = 0;
   message: string = "";
   showCounter: boolean = true;
+  fecha?:Date = new Date();
+  dolar: number = 1015;
 
   increaseCounter() {
     if(this.counter <11){

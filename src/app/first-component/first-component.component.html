@@ -4,6 +4,8 @@
 <button (click)="increaseCounter()">Suma</button>
 <button (click)="decreaseCounter()">Resta</button>
 <h5>El mensaje recibido desde second-component(hijo) es: {{messageFromSon}}</h5>
+<p>Fecha de hoy: {{fecha | date: 'dd/MM/YYYY'}}</p>
+<p>Cuánto cotiza el dolar: {{dolar | currency: 'EUR'}}</p>
 
 <h3>{{olderBrotherName | personalizedPipe}}</h3>
 <button (click)="salute()">Saludar</button>
