@@ -7,13 +7,15 @@ import { FirstComponentComponent } from './first-component/first-component.compo
 import { SecondComponentComponent } from './second-component/second-component.component';
 import { FormsModule } from '@angular/forms';
 import { FirstComponentBrotherComponent } from './first-component-brother/first-component-brother.component';
+import { BrotherStylesDirective } from './brother-styles.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponentComponent,
     SecondComponentComponent,
-    FirstComponentBrotherComponent
+    FirstComponentBrotherComponent,
+    BrotherStylesDirective
   ],
   imports: [
     BrowserModule,
