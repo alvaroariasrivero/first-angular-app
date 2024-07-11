@@ -1,11 +1,11 @@
 <h1 appBrotherStyles>First-component</h1>
 <h2 *ngIf="showCounter">{{counter}}</h2>
-<h2>{{message}}</h2>
+<h2>{{message | personalizedPipe}}</h2>
 <button (click)="increaseCounter()">Suma</button>
 <button (click)="decreaseCounter()">Resta</button>
 <h5>El mensaje recibido desde second-component(hijo) es: {{messageFromSon}}</h5>
 
-<h3>{{olderBrotherName}}</h3>
+<h3>{{olderBrotherName | personalizedPipe}}</h3>
 <button (click)="salute()">Saludar</button>
 
 <app-second-component [receivingFromParent]="messageToSon" (messageFromSon)="receiveMessage($event)"/>

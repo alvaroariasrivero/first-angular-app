@@ -8,6 +8,7 @@ import { SecondComponentComponent } from './second-component/second-component.co
 import { FormsModule } from '@angular/forms';
 import { FirstComponentBrotherComponent } from './first-component-brother/first-component-brother.component';
 import { BrotherStylesDirective } from './brother-styles.directive';
+import { PersonalizedPipePipe } from './personalized-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BrotherStylesDirective } from './brother-styles.directive';
     FirstComponentComponent,
     SecondComponentComponent,
     FirstComponentBrotherComponent,
-    BrotherStylesDirective
+    BrotherStylesDirective,
+    PersonalizedPipePipe
   ],
   imports: [
     BrowserModule,
